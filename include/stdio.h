@@ -158,7 +158,6 @@ libc_hidden_proto (fgets_unlocked)
 extern __typeof (fgets_unlocked) __fgets_unlocked;
 libc_hidden_proto (__fgets_unlocked)
 libc_hidden_proto (fputs_unlocked)
-libc_hidden_proto (fmemopen)
 libc_hidden_proto (open_memstream)
 libc_hidden_proto (__libc_fatal)
 libc_hidden_proto (__vsprintf_chk)
@@ -185,6 +184,9 @@ gets (char *__str)
   return __gets_warn (__str);
 }
 #  endif
+
+extern FILE * __fmemopen (void *buf, size_t len, const char *mode);
+libc_hidden_proto (__fmemopen)
 
 __END_DECLS
 # endif
