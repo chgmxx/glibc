@@ -20,7 +20,6 @@
 #include <sysdep-cancel.h>
 
 
-/* Reserve storage for the data of the file associated with FD.  */
 int
 fallocate (int fd, int mode, __off_t offset, __off_t len)
 {
