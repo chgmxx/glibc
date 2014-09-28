@@ -25,7 +25,6 @@ extern int __call_sync_file_range (int fd, off64_t offset, off64_t nbytes,
 				   unsigned int flags)
      attribute_hidden;
 
-
 int
 sync_file_range (int fd, __off64_t from, __off64_t to, unsigned int flags)
 {
